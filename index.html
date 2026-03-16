@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Carvalho | Backend Developer</title>
+    <meta name="description"
+        content="Arthur Carvalho - Desenvolvedor Backend Júnior focado em Go, PHP e Java. Construindo sistemas robustos e escaláveis.">
+
+    <!-- Google Fonts: Inter & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="reveal">
+            <div class="logo">Portifolio</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+                <div class="hero-text">
+                    <div class="badge">Disponível para novos desafios</div>
+                    <h1 id="typewriter-text">Arthur Carvalho</h1>
+                    <p class="subtitle">Backend Developer</p>
+                    <p class="description">
+                        Construindo sistemas robustos e escaláveis. Especialista em Backend com foco no ecossistema
+                        <strong>Go (Golang)</strong>, PHP e arquiteturas modernas.
+                    </p>
+
+                    <div class="social-icons">
+                        <a href="https://github.com/arthur-tadeu" target="_blank" title="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/arthur-carvalho-9704253a2/" target="_blank"
+                            title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:contato@exemplo.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">Explorar Projetos</a>
+                        <a href="#" class="btn btn-outline">Ver Currículo</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-container">
+                        <div class="glow-wrap">
+                            <div class="glow-circle"></div>
+                        </div>
+                        <div class="photo-frame">
+                            <img src="assets/img/foto.jpg" alt="Arthur Carvalho"
+                                onerror="this.src='https://via.placeholder.com/350x350?text=Sua+Foto+Aqui'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding reveal">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Sou um <strong>Desenvolvedor Backend Júnior</strong> com uma base sólida em PHP e Java,
+                            atualmente mergulhando fundo no universo de <strong>Go (Golang)</strong> e arquitetura de
+                            sistemas.</p>
+                        <p>Minha paixão está em resolver problemas complexos no lado do servidor, otimizando performance
+                            e garantindo a integridade dos dados. Acredito na melhoria contínua e estou sempre em busca
+                            de aprender novas tecnologias que desafiem meu raciocínio lógico.</p>
+                        <div class="learning-info">
+                            <h3><i class="fa-solid fa-graduation-cap"></i> Aprendendo agora:</h3>
+                            <p>Aprofundando em concorrência em Go, Microserviços e explorando Rust para o futuro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="section-padding bg-alt reveal">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="stack-grid">
+                    <div class="stack-category">
+                        <h3>Backend</h3>
+                        <div class="stack-items">
+                            <span class="stack-item" title="Go (Golang)"><i class="fa-brands fa-golang"></i> Go</span>
+                            <span class="stack-item" title="PHP"><i class="fa-brands fa-php"></i> PHP</span>
+                            <span class="stack-item" title="Java"><i class="fa-brands fa-java"></i> Java</span>
+                        </div>
+                    </div>
+                    <div class="stack-category">
+                        <h3>Frontend & Tools</h3>
+                        <div class="stack-items">
+                            <span class="stack-item"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="stack-item"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                            <span class="stack-item"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="stack-item"><i class="fa-brands fa-docker"></i> Docker</span>
+                            <span class="stack-item"><i class="fa-solid fa-database"></i> SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding reveal">
+            <div class="container">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>REST API em Go</h3>
+                            <p>Uma API de alta performance desenvolvida em Go, utilizando as melhores práticas de
+                                roteamento e middlewares.</p>
+                            <div class="project-tags">
+                                <span>Go</span>
+                                <span>Gin</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <a href="#" class="project-link">Github <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <!-- Adicionar mais cards conforme necessário -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Arthur Carvalho. Desenvolvido com foco no Backend.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
