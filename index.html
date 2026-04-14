@@ -24,13 +24,19 @@
 <body>
     <header>
         <nav class="reveal">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="pt">PT</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
             <div class="logo">Portifolio</div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#stack">Stack</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#home" class="active" data-i18n="navHome">Home</a></li>
+                <li><a href="#about" data-i18n="navAbout">Sobre</a></li>
+                <li><a href="#stack" data-i18n="navStack">Stack</a></li>
+                <li><a href="#certifications" data-i18n="navCerts">Certificações</a></li>
+                <li><a href="#projects" data-i18n="navProjects">Projetos</a></li>
+                <li><a href="#contact" data-i18n="navContact">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -40,10 +46,10 @@
         <section id="home" class="hero">
             <div class="hero-content reveal">
                 <div class="hero-text">
-                    <div class="badge">Disponível para novos desafios</div>
+                    <div class="badge" data-i18n="badge">Disponível para novos desafios</div>
                     <h1 id="typewriter-text">Arthur Carvalho</h1>
-                    <p class="subtitle">Backend Developer</p>
-                    <p class="description">
+                    <p class="subtitle" data-i18n="subtitle">Backend Developer</p>
+                    <p class="description" data-i18n="description">
                         Construindo sistemas robustos e escaláveis. Especialista em Backend com foco no ecossistema
                         <strong>Go (Golang)</strong>, PHP e arquiteturas modernas.
                     </p>
@@ -57,8 +63,8 @@
                     </div>
 
                     <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">Explorar Projetos</a>
-                        <a href="#" class="btn btn-outline">Ver Currículo</a>
+                        <a href="#projects" class="btn btn-primary" data-i18n="ctaProjects">Explorar Projetos</a>
+                        <a href="#" class="btn btn-outline" data-i18n="ctaCv">Ver Currículo</a>
                     </div>
                 </div>
 
@@ -79,18 +85,18 @@
         <!-- About Section -->
         <section id="about" class="section-padding reveal">
             <div class="container">
-                <h2 class="section-title">Sobre Mim</h2>
+                <h2 class="section-title" data-i18n="aboutTitle">Sobre Mim</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>Sou um <strong>Desenvolvedor Backend Júnior</strong> com uma base sólida em PHP e Java,
+                        <p data-i18n="aboutText1">Sou um <strong>Desenvolvedor Backend Júnior</strong> com uma base sólida em PHP e Java,
                             atualmente mergulhando fundo no universo de <strong>Go (Golang)</strong> e arquitetura de
                             sistemas.</p>
-                        <p>Minha paixão está em resolver problemas complexos no lado do servidor, otimizando performance
+                        <p data-i18n="aboutText2">Minha paixão está em resolver problemas complexos no lado do servidor, otimizando performance
                             e garantindo a integridade dos dados. Acredito na melhoria contínua e estou sempre em busca
                             de aprender novas tecnologias que desafiem meu raciocínio lógico.</p>
                         <div class="learning-info">
-                            <h3><i class="fa-solid fa-graduation-cap"></i> Aprendendo agora:</h3>
-                            <p>Aprofundando em concorrência em Go, Microserviços e explorando Rust para o futuro.</p>
+                            <h3 data-i18n="learningH3"><i class="fa-solid fa-graduation-cap"></i> Aprendendo agora:</h3>
+                            <p data-i18n="learningP">Aprofundando em concorrência em Go, Microserviços e explorando Rust para o futuro.</p>
                         </div>
                     </div>
                 </div>
@@ -100,10 +106,10 @@
         <!-- Tech Stack Section -->
         <section id="stack" class="section-padding bg-alt reveal">
             <div class="container">
-                <h2 class="section-title">Tech Stack</h2>
+                <h2 class="section-title" data-i18n="stackTitle">Tech Stack</h2>
                 <div class="stack-grid">
                     <div class="stack-category">
-                        <h3>Backend</h3>
+                        <h3 data-i18n="stackBackend">Backend</h3>
                         <div class="stack-items">
                             <span class="stack-item" title="Go (Golang)"><i class="fa-brands fa-golang"></i> Go</span>
                             <span class="stack-item" title="PHP"><i class="fa-brands fa-php"></i> PHP</span>
@@ -111,7 +117,7 @@
                         </div>
                     </div>
                     <div class="stack-category">
-                        <h3>Frontend & Tools</h3>
+                        <h3 data-i18n="stackFrontend">Frontend & Tools</h3>
                         <div class="stack-items">
                             <span class="stack-item"><i class="fa-brands fa-js"></i> JavaScript</span>
                             <span class="stack-item"><i class="fa-brands fa-css3-alt"></i> CSS</span>
@@ -124,15 +130,64 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-padding reveal">
+            <div class="container">
+                <h2 class="section-title" data-i18n="certTitle">Formação & Certificações</h2>
+                <div class="cert-grid">
+                    <div class="cert-card education">
+                        <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="cert-info">
+                            <h3 data-i18n="degreeSenai">Técnico em Desenvolvimento de Sistemas</h3>
+                            <p class="institution">SENAI</p>
+                            <p class="duration" data-i18n="durationSenai">1 ano e meio (Previsão 2026)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                        <div class="cert-info">
+                            <h3>AWS Cloud Practitioner Foundations</h3>
+                            <p class="year">2025</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-brands fa-microsoft"></i></div>
+                        <div class="cert-info">
+                            <h3>Microsoft Azure AZ-900</h3>
+                            <p class="year">2025</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div class="cert-info">
+                            <h3>FLUÊNCIA - Fundamentos da IA</h3>
+                            <p class="year">2025</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
+                        <div class="cert-info">
+                            <h3>Java Foundations - Oracle</h3>
+                            <p class="year">2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="section-padding reveal">
             <div class="container">
-                <h2 class="section-title">Projetos em Destaque</h2>
+                <h2 class="section-title" data-i18n="projectsTitle">Projetos em Destaque</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-info">
-                            <h3>REST API em Go</h3>
-                            <p>Uma API de alta performance desenvolvida em Go, utilizando as melhores práticas de
+                            <h3 data-i18n="projGoTitle">REST API em Go</h3>
+                            <p data-i18n="projGoDesc">Uma API de alta performance desenvolvida em Go, utilizando as melhores práticas de
                                 roteamento e middlewares.</p>
                             <div class="project-tags">
                                 <span>Go</span>
@@ -151,7 +206,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Arthur Carvalho. Desenvolvido com foco no Backend.</p>
+            <p data-i18n="footerText">&copy; 2026 Arthur Carvalho. Desenvolvido com foco no Backend.</p>
         </div>
     </footer>
 

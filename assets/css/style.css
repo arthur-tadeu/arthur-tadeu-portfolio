@@ -142,13 +142,59 @@ nav {
     align-self: center;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    font-weight: 600;
+    color: var(--text-dim);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    transition: var(--transition);
+    padding: 5px;
+}
+
+.lang-btn.active {
+    color: var(--primary);
+}
+
+.lang-btn:hover {
+    color: var(--text-main);
+}
+
 .hero-text h1 {
     font-size: 72px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 10px;
     letter-spacing: -2px;
+    min-height: 1.2em; /* Estabiliza o layout */
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Garante que o texto fique em uma linha */
 }
+
+#typewriter-text::after {
+    content: "|";
+    margin-left: 5px;
+    color: var(--text-main);
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 
 .hero-text .subtitle {
     font-size: 24px;
@@ -227,9 +273,9 @@ nav {
 
 .profile-container {
     position: relative;
-    width: 450px; /* Aumentado de 380px */
-    height: 450px; /* Aumentado de 380px */
-    transform: translate(-150px, -60px); /* Mais para a esquerda e um pouco mais para cima */
+    width: 350px; 
+    height: 350px; 
+    transform: translate(0px, -40px); /* Removido o recuo para a esquerda */
 }
 
 .photo-frame {
@@ -408,6 +454,55 @@ nav {
 
 .project-link:hover {
     color: var(--primary);
+}
+
+/* Certifications Section */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.cert-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.cert-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    background: rgba(230, 57, 70, 0.05);
+}
+
+.cert-icon {
+    font-size: 32px;
+    color: var(--primary);
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.cert-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.cert-info p {
+    font-size: 14px;
+    color: var(--text-dim);
+}
+
+.cert-card.education {
+    grid-column: 1 / -1;
+    background: linear-gradient(90deg, var(--bg-card) 0%, rgba(230, 57, 70, 0.1) 100%);
+    border-color: var(--primary-glow);
 }
 
 /* Animation Classes */
