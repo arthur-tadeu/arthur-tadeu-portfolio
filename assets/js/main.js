@@ -3,99 +3,91 @@ const translations = {
         navHome: "Home",
         navAbout: "Sobre",
         navStack: "Stack",
-        navCerts: "Certificações",
+        navEducation: "Educação",
         navProjects: "Projetos",
         navContact: "Contato",
-        badge: "Disponível para novos desafios",
+        badge: "Ola eu sou",
         subtitle: "Backend Developer",
-        description: "Construindo sistemas robustos e escaláveis. Especialista em Backend com foco no ecossistema <strong>Go (Golang)</strong>, PHP e arquiteturas modernas.",
+        description: "Construindo sistemas robustos e escaláveis. Especialista em Backend com foco em PHP, Java e agora explorando o campo da **Inteligência Artificial**.",
         ctaProjects: "Explorar Projetos",
         ctaCv: "Ver Currículo",
         aboutTitle: "Sobre Mim",
-        aboutText1: "Sou um <strong>Desenvolvedor Backend Júnior</strong> com uma base sólida em PHP e Java, atualmente mergulhando fundo no universo de <strong>Go (Golang)</strong> e arquitetura de sistemas.",
-        aboutText2: "Minha paixão está em resolver problemas complexos no lado do servidor, otimizando performance e garantindo a integridade dos dados. Acredito na melhoria contínua e estou sempre em busca de aprender novas tecnologias que desafiem meu raciocínio lógico.",
+        aboutText1: "Sou um <strong>Desenvolvedor Backend Júnior</strong> com uma base sólida em PHP e Java, atualmente mergulhando fundo em arquitetura de sistemas.",
+        aboutText2: "Atualmente, estou direcionando meus estudos para a área de **Inteligência Artificial**, buscando integrar soluções inteligentes e automação ao desenvolvimento backend. Acredito na inovação constante e na aplicação prática de novas tecnologias.",
         learningH3: "Aprendendo agora:",
-        learningP: "Aprofundando em concorrência em Go, Microserviços e explorando Rust para o futuro.",
+        learningP: "Aprofundando em **Inteligência Artificial**, Machine Learning e Visão Computacional.",
         stackTitle: "Tech Stack",
         stackBackend: "Backend",
+        stackDatabase: "Banco de Dados",
         stackFrontend: "Frontend & Ferramentas",
-        certTitle: "Formação & Certificações",
+        eduTitle: "Educação & Formação",
         degreeSenai: "Técnico em Desenvolvimento de Sistemas",
         durationSenai: "1 ano e meio (Previsão 2026)",
         projectsTitle: "Projetos em Destaque",
-        projGoTitle: "REST API em Go",
-        projGoDesc: "Uma API de alta performance desenvolvida em Go, utilizando as melhores práticas de roteamento e middlewares.",
         footerText: "Desenvolvido com foco no Backend",
-        typewriter: ["Arthur Carvalho", "Backend Developer"]
+        morpheuTitle: "Morpheu AI Assistant",
+        morpheuDesc: "Assistente virtual local inteligente. Focado em produtividade, segurança de dados e conversação fluida utilizando grandes modelos de linguagem (LLMs).",
+        morpheuTags: "<span>Python</span><span>IA</span><span>LLM</span>",
+        morpheuLink: "Ver Repositório",
+        ghostTitle: "GhostGlicth Archive",
+        ghostDesc: "Experiência atmosférica de e-commerce. Uma loja virtual altamente estilizada com estética gótica chuvosa e futurista (Cyber Tribal).",
+        ghostTags: "<span>React 19</span><span>Vite 8</span><span>Frontend</span><span>E-commerce</span>",
+        senaiModalTitle: "Técnico em Desenvolvimento de Sistemas",
+        senaiModalContent: `
+            <ul class="modal-list">
+                <li><strong>Stack Técnica</strong>: Base sólida em PHP e Java com MySQL/PostgreSQL.</li>
+                <li><strong>Inovação & IoT</strong>: Projetos de automação com Arduino e conceitos de IA.</li>
+                <li><strong>Projeto EpiGuard</strong>: Sistema de visão computacional desenvolvido como TCC para detecção de EPIs via inteligência artificial.</li>
+                <li><strong>Impacto Real</strong>: Colaboração de 4 meses com a <strong>Facchini</strong>, evoluindo o projeto EpiGuard em ambiente industrial corporativo.</li>
+            </ul>
+        `
     },
     en: {
         navHome: "Home",
         navAbout: "About",
         navStack: "Stack",
-        navCerts: "Certifications",
+        navEducation: "Education",
         navProjects: "Projects",
         navContact: "Contact",
-        badge: "Available for new challenges",
+        badge: "Hello i am",
         subtitle: "Backend Developer",
-        description: "Building robust and scalable systems. Backend specialist focusing on the <strong>Go (Golang)</strong> ecosystem, PHP, and modern architectures.",
+        description: "Building robust and scalable systems. Backend specialist focusing on PHP, Java, and now exploring the field of **Artificial Intelligence**.",
         ctaProjects: "Explore Projects",
         ctaCv: "View CV",
         aboutTitle: "About Me",
-        aboutText1: "I am a <strong>Junior Backend Developer</strong> with a solid foundation in PHP and Java, currently diving deep into the <strong>Go (Golang)</strong> universe and system architecture.",
-        aboutText2: "My passion lies in solving complex server-side problems, optimizing performance, and ensuring data integrity. I believe in continuous improvement and am always looking to learn new technologies that challenge my logical reasoning.",
+        aboutText1: "I am a <strong>Junior Backend Developer</strong> with a solid foundation in PHP and Java, currently diving deep into system architecture.",
+        aboutText2: "Currently, I am directing my studies towards **Artificial Intelligence**, seeking to integrate intelligent solutions and automation into backend development. I believe in constant innovation and the practical application of new technologies.",
         learningH3: "Currently learning:",
-        learningP: "Deepening in Go concurrency, Microservices and exploring Rust for the future.",
+        learningP: "Deepening in **Artificial Intelligence**, Machine Learning, and Computer Vision.",
         stackTitle: "Tech Stack",
         stackBackend: "Backend",
+        stackDatabase: "Databases",
         stackFrontend: "Frontend & Tools",
-        certTitle: "Education & Certifications",
+        eduTitle: "Education",
         degreeSenai: "Systems Development Technician",
         durationSenai: "1.5 years (Expected 2026)",
         projectsTitle: "Featured Projects",
-        projGoTitle: "REST API in Go",
-        projGoDesc: "A high-performance API developed in Go, using best practices for routing and middleware.",
         footerText: "Developed with a focus on Backend",
-        typewriter: ["Arthur Carvalho", "Backend Developer"]
+        morpheuTitle: "Morpheu AI Assistant",
+        morpheuDesc: "Local intelligent virtual assistant. Focused on productivity, data security, and fluid conversation using Large Language Models (LLMs).",
+        morpheuTags: "<span>Python</span><span>AI</span><span>LLM</span>",
+        morpheuLink: "View Repository",
+        ghostTitle: "GhostGlicth Archive",
+        ghostDesc: "Atmospheric e-commerce experience. A highly stylized storefront blending traditional Rainy Gothic aesthetics with a modern Cyber Tribal edge.",
+        ghostTags: "<span>React 19</span><span>Vite 8</span><span>Frontend</span><span>E-commerce</span>",
+        senaiModalTitle: "Systems Development Technician",
+        senaiModalContent: `
+            <ul class="modal-list">
+                <li><strong>Tech Stack</strong>: Solid foundation in PHP and Java with MySQL/PostgreSQL.</li>
+                <li><strong>Innovation & IoT</strong>: Automation projects with Arduino and AI concepts.</li>
+                <li><strong>EpiGuard Project</strong>: Computer vision system developed for detecting PPE usage through Artificial Intelligence.</li>
+                <li><strong>Real Impact</strong>: 4-month partnership with <strong>Facchini</strong>, evolving the EpiGuard project in a corporate industrial environment.</li>
+            </ul>
+        `
     }
 };
 
-let currentLang = localStorage.getItem('portfolio-lang') || 'pt';
-const textElement = document.getElementById('typewriter-text');
-let words = translations[currentLang].typewriter;
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typeSpeed = 100;
-let typewriterTimeout;
-
-function type() {
-    const currentWord = words[wordIndex];
-    if (!currentWord) return;
-    
-    const isName = currentWord === "Arthur Carvalho";
-    let displayText = currentWord.substring(0, isDeleting ? charIndex - 1 : charIndex + 1);
-    
-    textElement.textContent = displayText || "\u00A0";
-
-    if (isDeleting) {
-        charIndex--;
-        typeSpeed = 50;
-    } else {
-        charIndex++;
-        typeSpeed = isName ? 150 : 100;
-    }
-
-    if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        typeSpeed = 3000;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 500;
-    }
-
-    typewriterTimeout = setTimeout(type, typeSpeed);
-}
+let currentLang = localStorage.getItem('portfolio-lang') || 'en';
 
 function setLanguage(lang) {
     currentLang = lang;
@@ -109,14 +101,6 @@ function setLanguage(lang) {
             el.innerHTML = translations[lang][key];
         }
     });
-
-    // Atualizar Typewriter
-    words = translations[lang].typewriter;
-    wordIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-    clearTimeout(typewriterTimeout);
-    type();
 
     // Atualizar Botão de Idioma
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -183,4 +167,67 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(btn.getAttribute('data-lang'));
         });
     });
+
+    // Copy Phone Functionality
+    const copyPhoneBtn = document.getElementById('copy-phone');
+    if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const phoneNumber = '+55 (17) 99206-5167';
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                const message = currentLang === 'pt' ? 'Copiado: ' : 'Copied: ';
+                showToast(message + phoneNumber);
+            });
+        });
+    }
+
+    // --- Lógica do Modal ---
+    const modal = document.getElementById('cert-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    const closeBtn = document.querySelector('.close-modal');
+    const certCards = document.querySelectorAll('.cert-card');
+
+    certCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const isSenai = card.id === 'senai-cert';
+            
+            if (isSenai) {
+                const title = translations[currentLang].senaiModalTitle;
+                const body = translations[currentLang].senaiModalContent;
+                modalBody.innerHTML = `<h2>${title}</h2>${body}`;
+                modal.classList.add('active');
+            } else {
+                // Conteúdo para outras certificações - por enquanto vazio ou genérico
+                modalBody.innerHTML = `<h2>Certificação</h2><p>Detalhes em breve...</p>`;
+                modal.classList.add('active');
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    // Fechar ao clicar fora do conteúdo
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+    function showToast(message) {
+        let toast = document.querySelector('.toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check"></i><span class="toast-message"></span>`;
+            document.body.appendChild(toast);
+        }
+        const toastMessage = toast.querySelector('.toast-message');
+        toastMessage.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
 });
