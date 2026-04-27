@@ -25,13 +25,19 @@ const translations = {
         durationSenai: "1 ano e meio (Previsão 2026)",
         projectsTitle: "Projetos em Destaque",
         footerText: "Desenvolvido com foco no Backend",
+        
+        viewRepo: "Ver Repositório",
+        viewProject: "Ver Projeto",
+        phaseDev: "Fase: Desenvolvimento",
+        phaseTest: "Fase: Teste",
+        noDesc: "Nenhuma descrição fornecida.",
+        
         morpheuTitle: "Morpheu AI Assistant",
         morpheuDesc: "Assistente virtual local inteligente. Focado em produtividade, segurança de dados e conversação fluida utilizando grandes modelos de linguagem (LLMs).",
-        morpheuTags: "<span>Python</span><span>IA</span><span>LLM</span>",
-        morpheuLink: "Ver Repositório",
         ghostTitle: "GhostGlicth Archive",
         ghostDesc: "Experiência atmosférica de e-commerce. Uma loja virtual altamente estilizada com estética gótica chuvosa e futurista (Cyber Tribal).",
-        ghostTags: "<span>React 19</span><span>Vite 8</span><span>Frontend</span><span>E-commerce</span>",
+        mansaoSaborDesc: "Aplicação full stack com foco em desenvolvimento front-end, UI/UX e boas práticas de design.",
+        
         senaiModalTitle: "Técnico em Desenvolvimento de Sistemas",
         senaiModalContent: `
             <ul class="modal-list">
@@ -40,6 +46,27 @@ const translations = {
                 <li><strong>Projeto EpiGuard</strong>: Sistema de visão computacional desenvolvido como TCC para detecção de EPIs via inteligência artificial.</li>
                 <li><strong>Impacto Real</strong>: Colaboração de 4 meses com a <strong>Facchini</strong>, evoluindo o projeto EpiGuard em ambiente industrial corporativo.</li>
             </ul>
+        `,
+        mansaoSaborTitle: "mansao_sabor",
+        mansaoSaborContent: `
+            <div class="project-modal-details">
+                <p>O <strong>Mansão Sabor</strong> é um projeto inspirado no meme “sabor energético”, popularizado por Toguro. Desenvolvido durante o curso técnico de Desenvolvimento de Sistemas pelo SENAI, o projeto faz parte da minha jornada de aprendizado prático.</p>
+                <p>A proposta explora conceitos de desenvolvimento full stack, com foco na criação de interfaces modernas, responsivas e centradas no usuário. Para isso, foram utilizadas tecnologias como <span style="color: #f7df1e; font-weight: bold;">JavaScript</span>, <span style="color: #3178c6; font-weight: bold;">TypeScript</span>, <span style="color: #e34f26; font-weight: bold;">HTML</span> e <span style="color: #1572b6; font-weight: bold;">CSS</span>, com atenção especial à experiência do usuário (UI/UX) e à organização do código.</p>
+                
+                <h3 style="margin: 20px 0 10px; color: var(--primary);">📚 Aprendizados e práticas aplicadas no projeto</h3>
+                <ul class="modal-list">
+                    <li><strong>UI/UX (Interface e Experiência do Usuário)</strong>: Estruturação de layouts, hierarquia visual, usabilidade e design centrado no usuário.</li>
+                    <li><strong>Desenvolvimento Front-end</strong>: Construção da interface utilizando HTML, CSS e JavaScript, com foco em responsividade e interatividade.</li>
+                    <li><strong>Desenvolvimento Back-end</strong>: Organização da lógica da aplicação, integração de funcionalidades e estruturação do fluxo de dados.</li>
+                    <li><strong>Banco de Dados (<span style="color: #ffa611;">Firebase</span>)</strong>: Utilização do Firebase para armazenamento e gerenciamento de dados em tempo real.</li>
+                    <li><strong>Deploy e Hospedagem (<span style="color: #ffffff; background: #000; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">Vercel</span>)</strong>: Utilização do Vercel para publicação da aplicação e práticas de performance.</li>
+                    <li><strong>Integração de tecnologias</strong>: Uso conjunto de JavaScript e TypeScript para maior organização e escalabilidade.</li>
+                    <li><strong>Estilização e Design Responsivo</strong>: Aplicação de boas práticas de CSS para adaptação em diferentes dispositivos.</li>
+                    <li><strong>Consumo e manipulação de dados</strong>: Estruturação e manipulação de informações do banco.</li>
+                </ul>
+                
+                <a href="https://mansao-sabor-mwi5.vercel.app/" target="_blank" class="btn btn-primary" style="display: block; text-align: center; margin-top: 30px; width: 100%;">Acessar Sistema Vivo</a>
+            </div>
         `
     },
     en: {
@@ -68,13 +95,19 @@ const translations = {
         durationSenai: "1.5 years (Expected 2026)",
         projectsTitle: "Featured Projects",
         footerText: "Developed with a focus on Backend",
+        
+        viewRepo: "View Repository",
+        viewProject: "View Project",
+        phaseDev: "Phase: Development",
+        phaseTest: "Phase: Testing",
+        noDesc: "No description provided.",
+        
         morpheuTitle: "Morpheu AI Assistant",
-        morpheuDesc: "Local intelligent virtual assistant. Focused on productivity, data security, and fluid conversation using Large Language Models (LLMs).",
-        morpheuTags: "<span>Python</span><span>AI</span><span>LLM</span>",
-        morpheuLink: "View Repository",
+        morpheuDesc: "Intelligent local virtual assistant. Focused on productivity, data security, and fluid conversation using Large Language Models (LLMs).",
         ghostTitle: "GhostGlicth Archive",
         ghostDesc: "Atmospheric e-commerce experience. A highly stylized storefront blending traditional Rainy Gothic aesthetics with a modern Cyber Tribal edge.",
-        ghostTags: "<span>React 19</span><span>Vite 8</span><span>Frontend</span><span>E-commerce</span>",
+        mansaoSaborDesc: "Full stack application focusing on front-end development, UI/UX, and design best practices.",
+        
         senaiModalTitle: "Systems Development Technician",
         senaiModalContent: `
             <ul class="modal-list">
@@ -83,6 +116,24 @@ const translations = {
                 <li><strong>EpiGuard Project</strong>: Computer vision system developed for detecting PPE usage through Artificial Intelligence.</li>
                 <li><strong>Real Impact</strong>: 4-month partnership with <strong>Facchini</strong>, evolving the EpiGuard project in a corporate industrial environment.</li>
             </ul>
+        `,
+        mansaoSaborTitle: "mansao_sabor",
+        mansaoSaborContent: `
+            <div class="project-modal-details">
+                <p><strong>Mansão Sabor</strong> is a project inspired by the "sabor energético" meme. Developed during the Systems Development course at SENAI, this project is part of my practical learning journey.</p>
+                <p>The proposal explores full stack development concepts, focusing on modern, responsive, and user-centered interfaces. Technologies like <span style="color: #f7df1e; font-weight: bold;">JavaScript</span>, <span style="color: #3178c6; font-weight: bold;">TypeScript</span>, <span style="color: #e34f26; font-weight: bold;">HTML</span> and <span style="color: #1572b6; font-weight: bold;">CSS</span> were used, with special attention to UI/UX and code organization.</p>
+                
+                <h3 style="margin: 20px 0 10px; color: var(--primary);">📚 Learnings and practices</h3>
+                <ul class="modal-list">
+                    <li><strong>UI/UX</strong>: Layout structuring, visual hierarchy, and user-centered design.</li>
+                    <li><strong>Frontend Development</strong>: Interface building with HTML, CSS, and JS, focusing on responsiveness.</li>
+                    <li><strong>Backend Development</strong>: Application logic organization and data flow structuring.</li>
+                    <li><strong>Database (<span style="color: #ffa611;">Firebase</span>)</strong>: Real-time data management.</li>
+                    <li><strong>Deploy (<span style="color: #ffffff; background: #000; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">Vercel</span>)</strong>: Performance-focused hosting and deployment.</li>
+                    <li><strong>Integration</strong>: Using JS and TS together for better scalability.</li>
+                </ul>
+                <a href="https://mansao-sabor-mwi5.vercel.app/" target="_blank" class="btn btn-primary" style="display: block; text-align: center; margin-top: 30px; width: 100%;">Access Live System</a>
+            </div>
         `
     }
 };
@@ -127,10 +178,12 @@ const revealObserver = new IntersectionObserver((entries) => {
 // Header Scroll Effect
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     }
 });
 
@@ -141,9 +194,9 @@ const navLi = document.querySelectorAll('nav .nav-links li a');
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 300)) {
+        const divTop = section.offsetTop;
+        const divHeight = section.clientHeight;
+        if (pageYOffset >= (divTop - 300)) {
             current = section.getAttribute('id');
         }
     });
@@ -183,37 +236,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Lógica do Modal ---
     const modal = document.getElementById('cert-modal');
-    const modalBody = modal.querySelector('.modal-body');
-    const closeBtn = document.querySelector('.close-modal');
-    const certCards = document.querySelectorAll('.cert-card');
+    if (modal) {
+        const modalBody = modal.querySelector('.modal-body');
+        const closeBtn = document.querySelector('.close-modal');
 
-    certCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const isSenai = card.id === 'senai-cert';
+        // Listener para cards de certificação
+        document.querySelectorAll('.cert-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const isSenai = card.id === 'senai-cert';
+                
+                if (isSenai) {
+                    const title = translations[currentLang].senaiModalTitle;
+                    const body = translations[currentLang].senaiModalContent;
+                    modalBody.innerHTML = `<h2>${title}</h2>${body}`;
+                    modal.classList.add('active');
+                } else {
+                    modalBody.innerHTML = `<h2>Certificação</h2><p>Detalhes em breve...</p>`;
+                    modal.classList.add('active');
+                }
+            });
+        });
+
+        // Listener para botões "Ver Projeto"
+        document.querySelectorAll('.btn-view-project').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const projectKey = btn.getAttribute('data-project');
+                if (projectKey === 'mansao-sabor') {
+                    const title = translations[currentLang].mansaoSaborTitle;
+                    const body = translations[currentLang].mansaoSaborContent;
+                    modalBody.innerHTML = `<h2>${title}</h2>${body}`;
+                    modal.classList.add('active');
+                }
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
+
+    // --- Lógica de Filtro de Projetos (Avançada) ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const subFiltersBox = document.getElementById('subFilters');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    const techMap = {
+        back: ['PHP', 'Java', 'Python', 'Go'],
+        front: ['JavaScript', 'TypeScript', 'CSS', 'HTML'],
+        banco: ['Firebase', 'SQL', 'MySQL', 'PostgreSQL']
+    };
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
             
-            if (isSenai) {
-                const title = translations[currentLang].senaiModalTitle;
-                const body = translations[currentLang].senaiModalContent;
-                modalBody.innerHTML = `<h2>${title}</h2>${body}`;
-                modal.classList.add('active');
+            // UI Update
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Handle Sub-filters
+            if (filter === 'all') {
+                subFiltersBox.classList.remove('active');
+                subFiltersBox.innerHTML = '';
+                filterProjects('all', 'category');
             } else {
-                // Conteúdo para outras certificações - por enquanto vazio ou genérico
-                modalBody.innerHTML = `<h2>Certificação</h2><p>Detalhes em breve...</p>`;
-                modal.classList.add('active');
+                renderSubFilters(filter);
+                filterProjects(filter, 'category');
             }
         });
     });
 
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
+    function renderSubFilters(category) {
+        subFiltersBox.innerHTML = '';
+        subFiltersBox.classList.add('active');
+        
+        const techs = techMap[category] || [];
+        techs.forEach(tech => {
+            const techBtn = document.createElement('button');
+            techBtn.className = 'sub-filter-btn';
+            techBtn.textContent = tech;
+            techBtn.addEventListener('click', () => {
+                document.querySelectorAll('.sub-filter-btn').forEach(b => b.classList.remove('active'));
+                techBtn.classList.add('active');
+                filterProjects(tech.toLowerCase(), 'stack');
+            });
+            subFiltersBox.appendChild(techBtn);
+        });
+    }
 
-    // Fechar ao clicar fora do conteúdo
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-        }
-    });
+    function filterProjects(value, type) {
+        projectCards.forEach(card => {
+            const categoryAttr = card.getAttribute('data-category') || '';
+            const stackAttr = (card.getAttribute('data-stack') || '').toLowerCase();
+            
+            let isVisible = false;
+            if (value === 'all') {
+                isVisible = true;
+            } else if (type === 'category') {
+                isVisible = categoryAttr.includes(value);
+            } else if (type === 'stack') {
+                isVisible = stackAttr.includes(value);
+            }
+
+            if (isVisible) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 
     function showToast(message) {
         let toast = document.querySelector('.toast');

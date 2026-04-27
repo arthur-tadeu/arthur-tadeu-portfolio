@@ -198,8 +198,205 @@
         <section id="projects" class="section-padding reveal">
             <div class="container">
                 <h2 class="section-title" data-i18n="projectsTitle">Projetos em Destaque</h2>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Tudo</button>
+                    <button class="filter-btn" data-filter="back">Backend</button>
+                    <button class="filter-btn" data-filter="front">Frontend</button>
+                    <button class="filter-btn" data-filter="banco">Banco de Dados</button>
+                </div>
+
+                <div class="sub-filters" id="subFilters"></div>
+
                 <div class="projects-grid">
-                    <div class="loading">Carregando projetos...</div>
+                <div class="projects-grid">
+                    <div class="project-card reveal" data-category="front banco" data-stack="typescript javascript">
+                        <div class="pct-floating-badge">75%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" alt="mansao_sabor">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="mansaoSaborTitle">mansao_sabor</h3>
+                            <p data-i18n="mansaoSaborDesc">Aplicação full stack com foco em desenvolvimento front-end, UI/UX e boas práticas de design.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseTest">Fase: Teste</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-solid fa-code"></i> TypeScript</span>
+                                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span><i class="fa-solid fa-fire" style="color: #ffa611;"></i> Firebase</span>
+                            </div>
+                            <div class="project-actions" style="display: flex; gap: 20px; margin-top: 20px;">
+                                <a href="https://github.com/arthur-tadeu/mansao-sabor" target="_blank" class="project-link">
+                                    <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="#" class="project-link btn-view-project" data-project="mansao-sabor" onclick="return false;">
+                                    <span data-i18n="viewProject">Ver Projeto</span> <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-category="back front" data-stack="python javascript">
+                        <div class="pct-floating-badge">25%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1675557009875-436f5993936f?q=80&w=1974&auto=format&fit=crop" alt="morpheu_assistent">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="morpheuTitle">morpheu_assistent</h3>
+                            <p data-i18n="morpheuDesc">Nenhuma descrição fornecida.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseDev">Fase: Desenvolvimento</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-brands fa-python"></i> Python</span>
+                                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                            </div>
+                            <a href="https://github.com/arthur-tadeu/morpheu-assistent" target="_blank" class="project-link">
+                                <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-category="front" data-stack="javascript css">
+                        <div class="pct-floating-badge">18%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1618060932014-4eb9c9fc3ec9?q=80&w=2070&auto=format&fit=crop" alt="ghostGlicth">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="ghostTitle">ghostGlicth_</h3>
+                            <p data-i18n="ghostDesc">Nenhuma descrição fornecida.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseDev">Fase: Desenvolvimento</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 18%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                            </div>
+                            <a href="https://github.com/arthur-tadeu/ghostGlicth_" target="_blank" class="project-link">
+                                <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-category="back banco" data-stack="typescript sql">
+                        <div class="pct-floating-badge">5%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" alt="clean_arch">
+                        </div>
+                        <div class="project-info">
+                            <h3>clean_arch_customer_ap</h3>
+                            <p data-i18n="noDesc">Nenhuma descrição fornecida.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseDev">Fase: Desenvolvimento</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 5%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-solid fa-code"></i> TypeScript</span>
+                                <span><i class="fa-solid fa-database"></i> SQL</span>
+                            </div>
+                            <a href="https://github.com/arthur-tadeu/clean-arch-customer-ap" target="_blank" class="project-link">
+                                <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-category="back banco" data-stack="typescript sql">
+                        <div class="pct-floating-badge">5%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070&auto=format&fit=crop" alt="clientControl">
+                        </div>
+                        <div class="project-info">
+                            <h3>ClientControl</h3>
+                            <p data-i18n="noDesc">Nenhuma descrição fornecida.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseDev">Fase: Desenvolvimento</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 5%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-solid fa-code"></i> TypeScript</span>
+                                <span><i class="fa-solid fa-database"></i> SQL</span>
+                            </div>
+                            <a href="https://github.com/arthur-tadeu/ClientControl" target="_blank" class="project-link">
+                                <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-category="back front" data-stack="java typescript">
+                        <div class="pct-floating-badge">5%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1974&auto=format&fit=crop" alt="flowmind">
+                        </div>
+                        <div class="project-info">
+                            <h3>flowmind</h3>
+                            <p data-i18n="noDesc">Nenhuma descrição fornecida.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseDev">Fase: Desenvolvimento</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 5%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-brands fa-java"></i> Java</span>
+                                <span><i class="fa-solid fa-code"></i> TypeScript</span>
+                            </div>
+                            <a href="https://github.com/arthur-tadeu/flowmind" target="_blank" class="project-link">
+                                <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-category="back front" data-stack="python javascript">
+                        <div class="pct-floating-badge">5%</div>
+                        <div class="project-card-image">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop" alt="studybook">
+                        </div>
+                        <div class="project-info">
+                            <h3>studybook_notes</h3>
+                            <p data-i18n="noDesc">Nenhuma descrição fornecida.</p>
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label" data-i18n="phaseDev">Fase: Desenvolvimento</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 5%"></div>
+                                </div>
+                            </div>
+                            <div class="project-tags">
+                                <span><i class="fa-brands fa-python"></i> Python</span>
+                                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                            </div>
+                            <a href="https://github.com/arthur-tadeu/studybook-notes" target="_blank" class="project-link">
+                                <span data-i18n="viewRepo">Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -214,10 +411,6 @@
             </div>
         </div>
     </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <footer>
         <div class="container">

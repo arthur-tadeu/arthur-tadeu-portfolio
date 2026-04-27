@@ -35,6 +35,12 @@ body {
     line-height: 1.6;
 }
 
+@media (min-width: 1200px) {
+    body {
+        zoom: 1.1; /* Aumenta ligeiramente a escala global para o visual desejado */
+    }
+}
+
 h1,
 h2,
 h3,
@@ -43,13 +49,13 @@ h3,
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1350px; /* Aumentado de 1200px para dar mais amplitude */
     margin: 0 auto;
     padding: 0 40px;
 }
 
 .section-padding {
-    padding: 100px 0;
+    padding: 120px 0; /* Aumentado de 100px para dar mais "ar" */
 }
 
 .bg-alt {
@@ -179,7 +185,7 @@ nav {
 }
 
 .hero-text h1 {
-    font-size: 72px;
+    font-size: 82px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 10px;
@@ -424,7 +430,7 @@ nav {
 
 /* --- SECTIONS --- */
 .section-title {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 700;
     margin-bottom: 60px;
     letter-spacing: -1px;
@@ -504,6 +510,68 @@ nav {
     transform: translateY(-5px);
 }
 
+/* Project Filters */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    color: var(--text-main);
+    border-color: var(--primary-glow);
+}
+
+.sub-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.sub-filters.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.sub-filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.sub-filter-btn:hover, .sub-filter-btn.active {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-glow);
+}
+
 /* Projects Grid */
 .projects-grid {
     display: grid;
@@ -515,9 +583,11 @@ nav {
     background: var(--bg-card);
     border-radius: 24px;
     border: 1px solid var(--border);
-    padding: 35px;
     transition: var(--transition);
-    position: relative; /* Adicionado para o badge flutuante */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .pct-floating-badge {
@@ -547,9 +617,58 @@ nav {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+.project-card-image {
+    width: 100%;
+    height: 220px;
+    background: var(--bg-alt);
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: imageReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes imageReveal {
+    0% {
+        opacity: 0;
+        transform: scale(1.15) translateY(10px);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.08);
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.project-info {
+    padding: 30px;
+}
+
 .project-info h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--text-main) 0%, rgba(255,255,255,0.8) 45%, var(--primary) 50%, rgba(255,255,255,0.8) 55%, var(--text-main) 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 5s linear infinite;
+    display: inline-block;
 }
 
 .project-info p {
@@ -572,6 +691,9 @@ nav {
     background: var(--primary-glow);
     padding: 4px 12px;
     border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .project-link {
