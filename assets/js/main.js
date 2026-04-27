@@ -230,4 +230,93 @@ document.addEventListener('DOMContentLoaded', () => {
             toast.classList.remove('show');
         }, 3000);
     }
+
+    // --- Dynamic GitHub Projects ---
+    const GITHUB_TOKEN = ''; // INSIRA SEU TOKEN AQUI (Omitido para o commit por segurança)
+    const GITHUB_USER = 'arthur-tadeu';
+
+    async function fetchGitHubProjects() {
+        console.log("Iniciando busca de projetos no GitHub...");
+        const projectsGrid = document.querySelector('.projects-grid');
+        if (!projectsGrid) {
+            console.error("Grid de projetos não encontrado!");
+            return;
+        }
+
+        try {
+            const response = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=10`, {
+                headers: {
+                    'Authorization': `token ${GITHUB_TOKEN}`
+                }
+            });
+
+            console.log("Resposta da API:", response.status);
+
+            if (!response.ok) throw new Error(`Falha ao buscar repositórios: ${response.status}`);
+
+            const repos = await response.json();
+            console.log("Repositórios recebidos:", repos.length);
+            
+            projectsGrid.innerHTML = ''; // Limpar loading
+
+            // Mapeamento de completude (slug exato do GitHub)
+            const completionMap = {
+                'ghostGlicth_': 18,
+                'morpheu-assistent': 25,
+            };
+
+            repos.forEach(repo => {
+                if (repo.fork) return;
+
+                const percentage = completionMap[repo.name] || 5; // 5% como padrão para mostrar a barra
+                
+                const card = document.createElement('div');
+                card.className = 'project-card reveal';
+                
+                let tagsHtml = '';
+                if (repo.language) {
+                    tagsHtml = `<span>${repo.language}</span>`;
+                }
+                if (repo.topics && repo.topics.length > 0) {
+                    tagsHtml += repo.topics.slice(0, 2).map(t => `<span>${t}</span>`).join('');
+                }
+
+                card.innerHTML = `
+                    <div class="pct-floating-badge">${percentage}%</div>
+                    <div class="project-info">
+                        <h3>${repo.name.replace(/[-_]/g, ' ')}</h3>
+                        <p>${repo.description || 'Nenhuma descrição fornecida.'}</p>
+                        
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span class="progress-label">Desenvolvimento</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: ${percentage}%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            ${tagsHtml}
+                        </div>
+                        <a href="${repo.html_url}" target="_blank" class="project-link">
+                            <span>Ver Repositório</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                `;
+                
+                projectsGrid.appendChild(card);
+                
+                if (typeof revealObserver !== 'undefined') {
+                    revealObserver.observe(card);
+                }
+            });
+
+        } catch (error) {
+            console.error('Erro na integração com GitHub:', error);
+            projectsGrid.innerHTML = `<div class="error">Erro ao carregar projetos do GitHub: ${error.message}</div>`;
+        }
+    }
+
+    fetchGitHubProjects();
 });

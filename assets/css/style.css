@@ -301,6 +301,17 @@ nav {
     object-fit: cover;
 }
 
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--border);
+    font-size: 120px;
+}
+
 .glow-wrap {
     position: absolute;
     top: -20px;
@@ -316,6 +327,99 @@ nav {
     background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
     opacity: 0.6;
     filter: blur(40px);
+}
+
+/* Floating Tech Cards */
+.tech-cards-container {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Distanciamento bem pequeno */
+    z-index: 10;
+}
+
+.tech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 8px 16px; /* Um pouco mais compacto */
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-left: 3px solid var(--primary);
+    animation: float-stack 4s ease-in-out infinite;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.tech-card:nth-child(2) { animation-delay: 0.5s; }
+.tech-card:nth-child(3) { animation-delay: 1s; }
+
+.tech-card:hover {
+    transform: scale(1.05) translateX(10px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 30px var(--primary-glow);
+}
+
+.tech-card i {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+/* Full Stack Badge - Left side of the sphere */
+.full-stack-badge {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--primary), #b91c1c);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 15;
+    box-shadow: 0 8px 16px rgba(230, 57, 70, 0.3);
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-stack {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@media (max-width: 992px) {
+    .profile-container {
+        transform: translate(0, 0);
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+    
+    .tech-cards-container {
+        right: -30px;
+    }
+    
+    .full-stack-badge {
+        left: -30px;
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+    
+    .tech-card {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }
 
 /* --- SECTIONS --- */
@@ -413,6 +517,28 @@ nav {
     border: 1px solid var(--border);
     padding: 35px;
     transition: var(--transition);
+    position: relative; /* Adicionado para o badge flutuante */
+}
+
+.pct-floating-badge {
+    position: absolute;
+    top: -12px;
+    right: 25px;
+    background: linear-gradient(135deg, var(--primary), #b91c1c);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: float-mini 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-mini {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
 }
 
 .project-card:hover {
@@ -459,6 +585,47 @@ nav {
 
 .project-link:hover {
     color: var(--primary);
+}
+
+/* Progress Bar Styles */
+.project-progress {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+.progress-label {
+    font-weight: 500;
+}
+
+.progress-pct {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), #ff6b6b);
+    border-radius: 10px;
+    width: 0; /* Dinâmico */
+    transition: width 1.5s cubic-bezier(0.1, 0, 0.2, 1);
 }
 
 /* Certifications Section */
