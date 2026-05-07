@@ -575,7 +575,7 @@ nav {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -592,7 +592,7 @@ nav {
 
 .pct-floating-badge {
     position: absolute;
-    top: -12px;
+    top: 25px;
     right: 25px;
     background: linear-gradient(135deg, var(--primary), #b91c1c);
     color: white;
