@@ -375,32 +375,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Dynamic GitHub Projects ---
-    const GITHUB_TOKEN = ''; // INSIRA SEU TOKEN AQUI (Omitido para o commit por segurança)
     const GITHUB_USER = 'arthur-tadeu';
 
     async function fetchGitHubProjects() {
-        console.log("Iniciando busca de projetos no GitHub...");
+        console.log("Iniciando busca de projetos...");
         const projectsGrid = document.querySelector('.projects-grid');
-        if (!projectsGrid) {
-            console.error("Grid de projetos não encontrado!");
-            return;
-        }
+        if (!projectsGrid) return;
 
         try {
-            const response = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=10`, {
-                headers: {
-                    'Authorization': `token ${GITHUB_TOKEN}`
-                }
-            });
+            // Tenta usar a rota da API (Proxy Seguro no Vercel)
+            let response = await fetch('/api/github');
+            
+            // Fallback: Se a API falhar ou não existir (local), tenta chamada direta ao GitHub
+            if (!response.ok) {
+                console.warn("API interna falhou ou indisponível, tentando chamada direta ao GitHub (Sem Token)...");
+                response = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=10`);
+            }
 
-            console.log("Resposta da API:", response.status);
-
-            if (!response.ok) throw new Error(`Falha ao buscar repositórios: ${response.status}`);
+            if (!response.ok) {
+                if (response.status === 403) throw new Error("Limite de requisições excedido. Tente novamente mais tarde.");
+                throw new Error(`Erro: ${response.status}`);
+            }
 
             const repos = await response.json();
-            console.log("Repositórios recebidos:", repos.length);
+            console.log("Repositórios carregados:", repos.length);
             
-            projectsGrid.innerHTML = ''; // Limpar loading
+            projectsGrid.innerHTML = '';
 
             // Mapeamento de completude (slug exato do GitHub)
             const completionMap = {
